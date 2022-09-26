@@ -44,7 +44,7 @@ export default function App() {
           <RefreshControl refreshing={refreshing} onRefresh={refreshHandler} />
         }
         data={itemsToDisplay}
-        renderItem={(name) => <Text style={styles.text}>{name.item}</Text>}
+        renderItem={({ name }) => <Text style={styles.text}>{name}</Text>}
       />
       <Text>My name is not {name}</Text>
       <Button title="Change name" onPress={onClickHandler} />
